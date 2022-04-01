@@ -97,7 +97,7 @@ const debugObject = {
 }
 
 
-//debug
+//debug panel
 const gui = new dat.GUI();
 gui.add(mesh.position, 'y').min(-3).max(3).step(0.01);
 gui.add(mesh.position, 'x').min(-2).max(2).step(0.001);

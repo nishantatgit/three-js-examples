@@ -52,7 +52,7 @@ const debugObject = {
         gsap.to(mesh.rotation, { duration: 3    , y : mesh.rotation.y + Math.PI * 2})
     }
 }
-//debug
+//debug panel
 const gui = new dat.GUI();
 gui.add(mesh.position, 'y').min(-3).max(3).step(0.01);
 gui.add(mesh.position, 'x');
