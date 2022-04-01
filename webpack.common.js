@@ -4,7 +4,7 @@ const MiniCSSExtractPlugin = require('mini-css-extract-plugin')
 const path = require('path')
 
 module.exports = {
-    entry: path.resolve(__dirname, './src/appSimpleGeometry.js'),
+    entry: path.resolve(__dirname, './src/threeDFont.js'),
     output:
     {
         filename: 'bundle.[contenthash].js',
@@ -13,6 +13,11 @@ module.exports = {
     devtool: 'source-map',
     plugins:
     [
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: path.resolve(__dirname, './static') }
+            ]
+        }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, './public/index.html'),
             minify: true

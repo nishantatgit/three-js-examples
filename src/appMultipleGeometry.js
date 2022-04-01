@@ -9,21 +9,19 @@ const sizes = {
     height: window.innerHeight
 }
 
-//const geometry = new THREE.BoxGeometry(1,1,1);
+// const geometry = new THREE.BoxGeometry(1,1,1);
 
 
-const vector1 = new THREE.Vector3(0,0,0);
-const vector2 = new THREE.Vector3(0,1,0);
-const vector3 = new THREE.Vector3(1,0,0);
 
-const geometry = new THREE.Geometry();
-geometry.vertices.push(vector1);
-geometry.vertices.push(vector2);
-geometry.vertices.push(vector3);
+ const geometry = new THREE.Geometry();
 
-const face = new THREE.Face3(0,1,2);
-
-geometry.faces.push(face);
+ for(let i = 0; i < 150; i = i + 3){
+     geometry.vertices.push(new THREE.Vector3((Math.random() -0.5) * 4, Math.random() * 4, Math.random() * 4));
+     geometry.vertices.push(new THREE.Vector3(Math.random() * 4, Math.random() * 4, Math.random() * 4));
+     geometry.vertices.push(new THREE.Vector3(Math.random() * 4, Math.random() * 4, Math.random() * 4));
+     console.log(i,i+1,i+2);
+     geometry.faces.push(new THREE.Face3(i, i+1,i+2));
+ }
 
 const material = new THREE.MeshBasicMaterial({
     color: 'purple',
