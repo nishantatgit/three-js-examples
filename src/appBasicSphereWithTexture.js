@@ -45,7 +45,7 @@ controls.enableDamping = true;
 controls.update();
 
 const renderer = new Three.WebGLRenderer({
-    canvas: canvas
+    canvas: canvas,
 });
 
 renderer.setSize(sizes.width, sizes.height);
