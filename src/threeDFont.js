@@ -31,14 +31,15 @@ const metcapStyles = {
     teal: '512/04E8E8_04B5B5_04CCCC_33FCFC-512px.png',
     bubblyPink: '512/AA526C_EAA6C9_DC88AF_D17BA0-512px.png',
     softPink: '512/906867_C7B6BC_5D2E26_BEA4A3-512px.png',
-    offwhite: '512/E8DEE1_B5A6AA_CCBCC1_C4BBBC-512px.png'
+    offwhite: '512/E8DEE1_B5A6AA_CCBCC1_C4BBBC-512px.png',
+    creamyYellow: '512/E2D3BC_867255_B39E7F_96836C-512px.png'
 }
 const canvas = document.getElementById('webgl');
 document.body.style.backgroundColor = 'aliceblue';
 let textMaterial, textGeometry, textMesh;
 
 const textureLoader = new Three.TextureLoader();
-const matcapTexture = textureLoader.load(metcapStyles.offwhite);
+const matcapTexture = textureLoader.load(metcapStyles.creamyYellow);
 const matcapTexture2 = textureLoader.load(metcapStyles.teal);
 const metcapTexture3 = textureLoader.load(metcapStyles.citrusGreen);
 const fontLoader = new Three.FontLoader();
@@ -63,7 +64,7 @@ fontLoader.load(fontStyles.rajdhaniRegularFont,
             -textGeometry.boundingBox.max.y * 0.5,
             -textGeometry.boundingBox.max.z * 0.5,
         )
-        console.log(textGeometry.boundingBox);
+        console.log('-0---', textGeometry.boundingBox);
         textMaterial = new Three.MeshMatcapMaterial({
             matcap: matcapTexture
         });
