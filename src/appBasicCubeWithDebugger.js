@@ -13,7 +13,7 @@ const canvas = document.getElementById('webgl');
 
 const geometry = new Three.BoxGeometry(1,1,1);
 const material = new Three.MeshBasicMaterial({
-    color: '#00fff0'
+    color: '#ffffff'
 });
 
 const mesh = new Three.Mesh(geometry,material);
